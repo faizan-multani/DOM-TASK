@@ -12,28 +12,49 @@
       <li id="menu">menu</li>
       <li id="cart">cart</li>
       <li id="about">about</li>
-      <li id="details">details</li>
+      <li id="google"><a href="https://www.google.com/">google</a></li>
     </ul>
 
     <script>
-        // bubble phase
-      document.getElementById("ul-list").addEventListener("click",function (e) {
+      // bubble phase
+      document.getElementById("ul-list").addEventListener(
+        "click",
+        function (e) {
           console.log("clicked on ul-list")
-        },false) // by-default it will be false(bubble)
+        },
+        false
+      ) // by-default it will be false(bubble)
 
-      document.getElementById("cart").addEventListener("click",function (e) {
-          e.stopPropagation() // stopPropagation() used to stop the aproach of bubbling(bubble phase) 
+      document.getElementById("cart").addEventListener(
+        "click",
+        function (e) {
+          e.stopPropagation() // stopPropagation() used to stop the aproach of bubbling(bubble phase)
           console.log("clicked on cart")
-        },false) // bottom to top aproach(bubble)
+        },
+        false
+      ) // bottom to top aproach(bubble)
 
-        // capture phase
-        document.getElementById("ul-list").addEventListener("click",function (e) {
+      // capture phase
+      document.getElementById("ul-list").addEventListener(
+        "click",
+        function (e) {
           console.log("clicked on ul-list")
-        },true)
+        },
+        true
+      )
 
-      document.getElementById("cart").addEventListener("click",function (e) {
+      document.getElementById("cart").addEventListener(
+        "click",
+        function (e) {
           console.log("clicked on cart")
-        },true) // top to bottom aproach(capture phase)
+        },
+        true
+      ) // top to bottom aproach(capture phase)
+
+      // preventDefault()
+      document.getElementById("google").addEventListener("click", function (e) {
+        e.preventDefault() // stops to navigate to another page
+      })
     </script>
   </body>
 </html>
