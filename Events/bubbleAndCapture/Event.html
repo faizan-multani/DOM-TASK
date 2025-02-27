@@ -28,6 +28,7 @@
       document.getElementById("cart").addEventListener(
         "click",
         function (e) {
+          // console.log(e.type);
           e.stopPropagation() // stopPropagation() used to stop the aproach of bubbling(bubble phase)
           console.log("clicked on cart")
         },
