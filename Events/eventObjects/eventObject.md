@@ -23,7 +23,7 @@ li.addEventListener("click", (e) => {
 ```
 
 # 2) 'timeStamp' event ->
-## timeStamp event : gives the time in millisecon,when the even was created.
+## timeStamp event : gives the time in millisecon,when the event was created.
 
 ```js
 const li = document.querySelector(".ul-list")
