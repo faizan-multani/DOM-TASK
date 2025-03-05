@@ -11,10 +11,16 @@
 
     <script>
 
-        const text = function(){
-            document.querySelector('h1').innerHTML = "hello my friend"
+        // const text = function(){
+        //     document.querySelector('h1').innerHTML = "hello my friend"
+        // }
+        // setTimeout(text,2000)
+
+        const setInt = function(){
+            console.log("hello")
         }
-        setTimeout(text,2000)
+        const intervalID = setInterval(setInt,1000) 
+        clearInterval(intervalID) // to stop the interval
 
         
     </script>
